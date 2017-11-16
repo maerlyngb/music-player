@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-- Library Screen displaying a grid of albums -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/LibraryViewContainer"
@@ -10,14 +12,14 @@
         <!-- Large image at the top of the library screen -->
         <ImageView
             style="@style/LibraryTitleImage"
-            android:src="@drawable/title_image"
-            android:contentDescription="@string/library_title_image"/>
+            android:contentDescription="@string/library_title_image"
+            android:src="@drawable/title_image" />
 
         <!-- Library screen title -->
         <TextView
             android:id="@+id/library_title"
             style="@style/LibraryTitle"
-            android:text="@string/library_title"/>
+            android:text="@string/library_title" />
 
     </RelativeLayout>
 
