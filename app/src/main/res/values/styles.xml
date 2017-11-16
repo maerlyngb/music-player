@@ -1,11 +1,271 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="FullWidth">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="MatchParent">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="WrapContent">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+
+    <!-- Library screen -->
+
+    <style name="LibraryViewContainer" parent="MatchParent">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="LibraryItemContainer" parent="MatchParent">
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:elevation">@dimen/dp_xxsmall</item>
+    </style>
+
+    <style name="LibraryTitleContainer" parent="MatchParent">
+        <item name="android:layout_height">@dimen/dp_zero</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="LibraryTitleImage" parent="FullWidth">
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="LibraryTitle" parent="MatchParent">
+        <item name="android:textSize">@dimen/sp_xlarge</item>
+        <item name="android:paddingLeft">@dimen/dp_medium</item>
+        <item name="android:paddingBottom">@dimen/dp_medium</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:background">@drawable/scrim</item>
+        <item name="android:gravity">bottom</item>
+    </style>
+
+    <style name="LibraryGrid" parent="MatchParent">
+        <item name="android:numColumns">auto_fit</item>
+        <item name="android:verticalSpacing">@dimen/dp_medium</item>
+        <item name="android:horizontalSpacing">@dimen/dp_medium</item>
+        <item name="android:stretchMode">columnWidth</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:padding">@dimen/dp_medium</item>
+        <item name="android:drawSelectorOnTop">true</item>
+        <item name="android:layout_height">@dimen/dp_zero</item>
+        <item name="android:layout_weight">2</item>
+    </style>
+
+    <style name="LibraryAlbumArtContainer" parent="MatchParent"></style>
+
+    <style name="LibraryAlbumArt" parent="MatchParent">
+        <item name="android:textSize">@dimen/sp_xlarge</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:contentDescription">@string/album_art</item>
+    </style>
+
+    <style name="LibraryAlbumIconContainer" parent="WrapContent">
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginRight">@dimen/dp_medium</item>
+        <item name="android:paddingBottom">@dimen/dp_medium</item>
+    </style>
+
+    <style name="LibraryAlbumIcon" parent="WrapContent">
+        <item name="android:background">@drawable/circle</item>
+        <item name="android:padding">@dimen/dp_xsmall</item>
+        <item name="android:src">@drawable/ic_play_arrow</item>
+    </style>
+
+    <style name="LibraryAlbumPlayIcon" parent="WrapContent">
+        <item name="android:textSize">@dimen/sp_xlarge</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:src">@drawable/ic_play_arrow</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:paddingRight">@dimen/dp_medium</item>
+        <item name="android:paddingBottom">@dimen/dp_medium</item>
+    </style>
+
+    <style name="LibraryAlbumText" parent="FullWidth">
+        <item name="android:paddingTop">@dimen/dp_small</item>
+        <item name="android:paddingLeft">@dimen/dp_small</item>
+        <item name="android:paddingRight">@dimen/dp_small</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="LibraryAlbumTitle" parent="LibraryAlbumText">
+        <item name="android:textSize">@dimen/sp_medium</item>
+        <item name="android:textColor">@color/primaryText</item>
+    </style>
+
+    <style name="LibraryAlbumArtist" parent="LibraryAlbumText">
+        <item name="android:paddingTop">@dimen/dp_xsmall</item>
+        <item name="android:paddingBottom">@dimen/dp_small</item>
+        <item name="android:textColor">@color/secondaryText</item>
+    </style>
+
+
+    <!-- Album Screen -->
+
+    <style name="AlbumViewLayout" parent="FullWidth">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="AlbumViewArt" parent="FullWidth"></style>
+
+    <style name="AlbumViewTitleText" parent="FullWidth">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:paddingLeft">@dimen/dp_medium</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/sp_xlarge</item>
+    </style>
+
+    <style name="AlbumViewName" parent="AlbumViewTitleText">
+        <item name="android:paddingTop">@dimen/dp_large</item>
+        <item name="android:layout_above">@+id/artist_name</item>
+    </style>
+
+    <style name="AlbumViewArtist" parent="AlbumViewTitleText">
+        <item name="android:paddingBottom">@dimen/dp_medium</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textSize">@dimen/sp_medium</item>
+        <item name="android:layout_alignBottom">@+id/album_art</item>
+    </style>
+
+    <style name="ShuffleAlbum" parent="WrapContent">
+        <item name="android:layout_above">@+id/artist_name</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginBottom">@dimen/fab_marginBottom</item>
+        <item name="android:layout_marginEnd">@dimen/dp_medium</item>
+        <item name="android:layout_marginRight">@dimen/dp_medium</item>
+        <item name="android:src">@drawable/ic_shuffle</item>
+        <item name="android:elevation">@dimen/dp_small</item>
+    </style>
+
+    <style name="SongList" parent="FullWidth">
+        <item name="android:drawSelectorOnTop">true</item>
+    </style>
+
+
+    <!-- Song  -->
+
+    <style name="SongContainer" parent="FullWidth">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:padding">@dimen/dp_medium</item>
+    </style>
+
+    <style name="SongDetail" parent="FullWidth">
+        <item name="android:layout_width">@dimen/dp_zero</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="SongNumber" parent="SongDetail"></style>
+
+    <style name="SongName" parent="SongDetail">
+        <item name="android:textColor">@color/primaryText</item>
+        <item name="android:layout_weight">8</item>
+    </style>
+
+    <style name="SongLength" parent="SongDetail"></style>
+
+    <!-- Player -->
+
+    <style name="SongDetailsContainer" parent="FullWidth">
+
+    </style>
+
+    <style name="SongDetailsOverlay" parent="MatchParent">
+        <item name="android:layout_alignBottom">@+id/album_art</item>
+        <item name="android:background">@drawable/darken</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="SongDetailOverlayText" parent="FullWidth">
+
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="SongDetailTitle" parent="SongDetailOverlayText">
+        <item name="android:layout_marginBottom">@dimen/dp_xsmall</item>
+        <item name="android:layout_marginLeft">@dimen/dp_large</item>
+        <item name="android:layout_marginRight">@dimen/dp_large</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">@dimen/sp_xlarge</item>
+    </style>
+
+    <style name="SongDetailArtist" parent="SongDetailOverlayText">
+        <item name="android:layout_marginBottom">@dimen/dp_medium</item>
+        <item name="android:textSize">@dimen/sp_medium</item>
+    </style>
+
+    <style name="SongSeekBar" parent="FullWidth">
+        <item name="android:layout_marginLeft">@dimen/dp_large</item>
+        <item name="android:layout_marginRight">@dimen/dp_large</item>
+        <item name="android:layout_marginTop">@dimen/dp_large</item>
+        <item name="android:progress">0</item>
+    </style>
+
+    <style name="SongTimeContainer" parent="FullWidth">
+        <item name="android:layout_marginLeft">@dimen/dp_large</item>
+        <item name="android:layout_marginRight">@dimen/dp_large</item>
+        <item name="android:layout_marginBottom">@dimen/dp_large</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="SongSeekTime" parent="FullWidth">
+        <item name="android:layout_width">@dimen/dp_zero</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="SongEndTime" parent="SongSeekTime">
+        <item name="android:gravity">right</item>
+    </style>
+
+    <style name="MusicControlContainer" parent="FullWidth">
+        <item name="android:layout_marginTop">@dimen/dp_large</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="MusicControlIcon" parent="WrapContent">
+        <item name="android:layout_width">@dimen/dp_zero</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="PreviousIcon" parent="MusicControlIcon">
+        <item name="android:src">@drawable/ic_skip_previous</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_weight">2</item>
+    </style>
+
+    <style name="PauseIcon" parent="MusicControlIcon">
+        <item name="android:src">@drawable/ic_pause_circle_outline</item>
+    </style>
+
+    <style name="NextIcon" parent="MusicControlIcon">
+        <item name="android:src">@drawable/ic_skip_next</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_weight">2</item>
     </style>
 
 </resources>

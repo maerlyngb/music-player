@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="io.maerlyn.musicplayer.PlayerActivity">
+
+    <!-- Song Details Container -->
+    <RelativeLayout style="@style/SongDetailsContainer">
+
+        <!-- Album Art  -->
+        <io.maerlyn.musicplayer.SquareImageView
+            android:id="@+id/album_art"
+            style="@style/LibraryAlbumArt" />
+
+        <!-- Song details abd controls overlaid on top of album art -->
+        <LinearLayout style="@style/SongDetailsOverlay">
+
+            <!-- Song Name-->
+            <TextView
+                android:id="@+id/song_name"
+                style="@style/SongDetailTitle" />
+
+            <!-- Song Artist -->
+            <TextView
+                android:id="@+id/song_artist"
+                style="@style/SongDetailArtist" />
+
+            <!-- Song Seek Bar-->
+            <SeekBar
+                android:id="@+id/seek_bar"
+                style="@style/SongSeekBar" />
+
+            <!-- Song times -->
+            <LinearLayout style="@style/SongTimeContainer">
+
+                <!-- Song Start Time -->
+                <TextView
+                    android:id="@+id/song_start_time"
+                    style="@style/SongSeekTime"
+                    android:text="00:00" />
+
+                <!--Song End Time-->
+                <TextView
+                    android:id="@+id/song_end_time"
+                    style="@style/SongEndTime" />
+
+            </LinearLayout>
+
+            <!-- Music Controls -->
+            <LinearLayout
+                android:id="@+id/music_control_container"
+                style="@style/MusicControlContainer">
+
+                <!-- Previous Song Button -->
+                <ImageView
+                    android:id="@+id/previous_icon"
+                    style="@style/PreviousIcon"
+                    android:contentDescription="@string/previous_song" />
+
+                <!-- Pause Song Button -->
+                <ImageView
+                    android:id="@+id/pause_icon"
+                    style="@style/PauseIcon"
+                    android:contentDescription="@string/pause_song" />
+
+                <!-- Next Icon Button -->
+                <ImageView
+                    android:id="@+id/next_icon"
+                    style="@style/NextIcon"
+                    android:contentDescription="@string/next_song" />
+
+            </LinearLayout> <!-- / Music Controls-->
+
+        </LinearLayout> <!-- / Song details and controls overlay-->
+
+    </RelativeLayout> <!-- / Song Details Container -->
+
+    <!-- List of album songs -->
+    <ListView
+        android:id="@+id/song_list"
+        style="@style/SongList" />
+
+</LinearLayout>

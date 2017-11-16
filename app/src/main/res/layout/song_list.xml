@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/song_container"
+    style="@style/SongContainer">
+
+    <!-- Song Number -->
+    <TextView
+        android:id="@+id/song_number"
+        style="@style/SongNumber" />
+
+    <!-- Song Name -->
+    <TextView
+        android:id="@+id/song_name"
+        style="@style/SongName" />
+
+    <!-- Song Length -->
+    <TextView
+        android:id="@+id/song_length"
+        style="@style/SongLength" />
+
+</LinearLayout>
+
+

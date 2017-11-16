@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/AlbumViewLayout"
+    tools:context="io.maerlyn.musicplayer.AlbumActivity">
+
+    <!-- Album art and title container -->
+    <RelativeLayout style="@style/AlbumViewArt">
+
+        <!-- Album Art-->
+        <io.maerlyn.musicplayer.SquareImageView
+            android:id="@+id/album_art"
+            style="@style/LibraryTitleImage" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/shuffle_album"
+            style="@style/ShuffleAlbum"
+            android:layout_above="@+id/artist_name"
+            app:fabSize="normal" />
+
+        <!-- Album Name -->
+        <TextView
+            android:id="@+id/album_name"
+            style="@style/AlbumViewName" />
+
+        <!-- Artist Name -->
+        <TextView
+            android:id="@+id/artist_name"
+            style="@style/AlbumViewArtist" />
+
+    </RelativeLayout>
+
+    <!-- List of album songs -->
+    <ListView
+        android:id="@+id/song_list"
+        style="@style/SongList" />
+
+</LinearLayout>

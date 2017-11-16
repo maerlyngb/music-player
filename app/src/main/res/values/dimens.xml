@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dp_zero">0dp</dimen>
+    <dimen name="dp_xxsmall">2dp</dimen>
+    <dimen name="dp_xsmall">4dp</dimen>
+    <dimen name="dp_small">8dp</dimen>
+    <dimen name="dp_medium">16dp</dimen>
+    <dimen name="dp_large">24dp</dimen>
+    <dimen name="dp_xlarge">32dp</dimen>
+
+    <dimen name="sp_xsmall">4sp</dimen>
+    <dimen name="sp_small">8sp</dimen>
+    <dimen name="sp_medium">16sp</dimen>
+    <dimen name="sp_large">24sp</dimen>
+    <dimen name="sp_xlarge">32sp</dimen>
+
+    <dimen name="fab_marginBottom">38dp</dimen>
+</resources>
