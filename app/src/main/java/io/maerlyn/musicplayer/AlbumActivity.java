@@ -4,15 +4,18 @@ import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.graphics.Palette;
+import android.support.v7.widget.Toolbar;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
@@ -26,6 +29,17 @@ public class AlbumActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_album);
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        toolbar.bringToFront();
+
+        // Get a support ActionBar corresponding to this toolbar
+        ActionBar actionBar = getSupportActionBar();
+
+        // Enable the Up button
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
         // load the album data that was passed as an intent extra.
         Intent intent = getIntent();
@@ -95,5 +109,14 @@ public class AlbumActivity extends AppCompatActivity {
         if (myBitmap != null && !myBitmap.isRecycled()) {
             Palette.from(myBitmap).generate(paletteListener);
         }
+    }
+
+    public int getStatusBarHeight() {
+        int result = 0;
+        int resourceId = getResources().getIdentifier("status_bar_height", "dimen", "android");
+        if (resourceId > 0) {
+            result = getResources().getDimensionPixelSize(resourceId);
+        }
+        return result;
     }
 }

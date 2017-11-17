@@ -16,8 +16,31 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AlbumActivity" />
-        <activity android:name=".PlayerActivity"></activity>
+
+        <!-- Album View-->
+        <activity
+            android:name=".AlbumActivity"
+            android:label="@string/album"
+            android:parentActivityName="io.maerlyn.musicplayer.MainActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="io.maerlyn.musicplayer.MainActivity" />
+        </activity>
+
+        <!-- Music Player -->
+        <activity
+            android:name=".PlayerActivity"
+            android:label="@string/now_playing"
+            android:value="io.maerlyn.musicplayer.MainActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="io.maerlyn.musicplayer.MainActivity" />
+        </activity> <!-- /Music Player -->
+
     </application>
 
 </manifest>

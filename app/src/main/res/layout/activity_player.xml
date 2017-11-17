@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!-- Music Player Screen -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,6 +12,11 @@
 
     <!-- Song Details Container -->
     <RelativeLayout style="@style/SongDetailsContainer">
+
+        <!-- Transparent Toolbar -->
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/TransparentToolbar" />
 
         <!-- Album Art  -->
         <io.maerlyn.musicplayer.SquareImageView
@@ -63,9 +70,9 @@
 
                 <!-- Pause Song Button -->
                 <ImageView
-                    android:id="@+id/pause_icon"
-                    style="@style/PauseIcon"
-                    android:contentDescription="@string/pause_song" />
+                    android:id="@+id/play_pause_icon"
+                    style="@style/PlayPauseIcon"
+                    android:contentDescription="@string/play_pause_song" />
 
                 <!-- Next Icon Button -->
                 <ImageView

@@ -10,6 +10,11 @@
     <!-- Album art and title container -->
     <RelativeLayout style="@style/AlbumViewArt">
 
+        <!-- Transparent Toolbar -->
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/TransparentToolbar" />
+
         <!-- Album Art-->
         <io.maerlyn.musicplayer.SquareImageView
             android:id="@+id/album_art"

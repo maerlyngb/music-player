@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         elSongs.add(new Song(14, getString(R.string.el_jh_t14_name), getString(R.string.el_jh_t14_length)));
         elSongs.add(new Song(15, getString(R.string.el_jh_t15_name), getString(R.string.el_jh_t15_length)));
         elSongs.add(new Song(16, getString(R.string.el_jh_t16_name), getString(R.string.el_jh_t16_length)));
-        albumList.add(new Album(getString(R.string.el_jh_title), getString(R.string.el_jh_artist), elSongs, R.drawable.electric_ladyland));
+        albumList.add(new Album(getString(R.string.el_jh_title), getString(R.string.el_jh_artist), elSongs, R.drawable.el_jh));
 
 
         List<Song> nevSongs = new ArrayList<>();
@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         nevSongs.add(new Song(11, getString(R.string.n_n_t11_title), getString(R.string.n_n_t11_length)));
         nevSongs.add(new Song(12, getString(R.string.n_n_t12_title), getString(R.string.n_n_t12_length)));
         nevSongs.add(new Song(13, getString(R.string.n_n_t13_title), getString(R.string.n_n_t13_length)));
-        albumList.add(new Album(getString(R.string.n_n_title), getString(R.string.n_n_artist), nevSongs, R.drawable.nervermind));
+        albumList.add(new Album(getString(R.string.n_n_title), getString(R.string.n_n_artist), nevSongs, R.drawable.n_n));
 
         List<Song> paraSongs = new ArrayList<>();
         paraSongs.add(new Song(1, getString(R.string.p_bs_t1_name), getString(R.string.p_bs_t1_length)));
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         paraSongs.add(new Song(6, getString(R.string.p_bs_t6_name), getString(R.string.p_bs_t6_length)));
         paraSongs.add(new Song(7, getString(R.string.p_bs_t7_name), getString(R.string.p_bs_t7_length)));
         paraSongs.add(new Song(8, getString(R.string.p_bs_t8_name), getString(R.string.p_bs_t8_length)));
-        albumList.add(new Album(getString(R.string.p_bs_title), getString(R.string.p_bs_artist), paraSongs, R.drawable.paranoid));
+        albumList.add(new Album(getString(R.string.p_bs_title), getString(R.string.p_bs_artist), paraSongs, R.drawable.p_bs));
 
         List<Song> catSongs = new ArrayList<>();
         catSongs.add(new Song(1, getString(R.string.cf_bm_t1_name), getString(R.string.cf_bm_t1_length)));
@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
         catSongs.add(new Song(7, getString(R.string.cf_bm_t7_name), getString(R.string.cf_bm_t7_length)));
         catSongs.add(new Song(8, getString(R.string.cf_bm_t8_name), getString(R.string.cf_bm_t8_length)));
         catSongs.add(new Song(9, getString(R.string.cf_bm_t9_name), getString(R.string.cf_bm_t9_length)));
-        albumList.add(new Album(getString(R.string.cf_bm_title), getString(R.string.cf_bm_artist), catSongs, R.drawable.catch_a_fire));
+       albumList.add(new Album(getString(R.string.cf_bm_title), getString(R.string.cf_bm_artist), catSongs, R.drawable.cf_bm));
 
         List<Song> metSongs = new ArrayList<>();
         metSongs.add(new Song(1, getString(R.string.m_m_t1_name), getString(R.string.m_m_t1_length)));
@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
         metSongs.add(new Song(10, getString(R.string.m_m_t10_name), getString(R.string.m_m_t10_length)));
         metSongs.add(new Song(11, getString(R.string.m_m_t11_name), getString(R.string.m_m_t11_length)));
         metSongs.add(new Song(12, getString(R.string.m_m_t12_name), getString(R.string.m_m_t12_length)));
-        albumList.add(new Album(getString(R.string.m_m_title), getString(R.string.m_m_Artist), metSongs, R.drawable.metallica));
+        albumList.add(new Album(getString(R.string.m_m_title), getString(R.string.m_m_Artist), metSongs, R.drawable.m_m));
 
         List<Song> numSongs = new ArrayList<>();
         numSongs.add(new Song(1, getString(R.string.nb_im_t1_name), getString(R.string.nb_im_t1_title)));
@@ -125,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
         numSongs.add(new Song(2, getString(R.string.nb_im_t6_name), getString(R.string.nb_im_t6_title)));
         numSongs.add(new Song(3, getString(R.string.nb_im_t7_name), getString(R.string.nb_im_t7_title)));
         numSongs.add(new Song(4, getString(R.string.nb_im_t8_name), getString(R.string.nb_im_t8_title)));
-        albumList.add(new Album(getString(R.string.nb_im_title), getString(R.string.nb_im_artist), numSongs, R.drawable.number_of_the_beast));
+        albumList.add(new Album(getString(R.string.nb_im_title), getString(R.string.nb_im_artist), numSongs, R.drawable.nb_im));
 
         return albumList;
     }

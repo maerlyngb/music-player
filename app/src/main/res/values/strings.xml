@@ -5,7 +5,7 @@
     <string name="library_title_image">Library Title Image</string>
     <string name="play_album">Play Album</string>
     <string name="previous_song">Previous</string>
-    <string name="pause_song">Pause</string>
+    <string name="play_pause_song">Pause</string>
     <string name="next_song">Next</string>
     <string name="now_playing">Now Playing</string>
 
@@ -154,4 +154,5 @@
     <string name="nb_im_t6_title">3:50</string>
     <string name="nb_im_t7_title">3:46</string>
     <string name="nb_im_t8_title">7:08</string>
+    <string name="album">Album</string>
 </resources>
