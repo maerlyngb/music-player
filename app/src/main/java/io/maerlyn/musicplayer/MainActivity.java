@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
         catSongs.add(new Song(7, getString(R.string.cf_bm_t7_name), getString(R.string.cf_bm_t7_length)));
         catSongs.add(new Song(8, getString(R.string.cf_bm_t8_name), getString(R.string.cf_bm_t8_length)));
         catSongs.add(new Song(9, getString(R.string.cf_bm_t9_name), getString(R.string.cf_bm_t9_length)));
-       albumList.add(new Album(getString(R.string.cf_bm_title), getString(R.string.cf_bm_artist), catSongs, R.drawable.cf_bm));
+        albumList.add(new Album(getString(R.string.cf_bm_title), getString(R.string.cf_bm_artist), catSongs, R.drawable.cf_bm));
 
         List<Song> metSongs = new ArrayList<>();
         metSongs.add(new Song(1, getString(R.string.m_m_t1_name), getString(R.string.m_m_t1_length)));

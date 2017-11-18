@@ -15,4 +15,5 @@
     <dimen name="sp_xlarge">32sp</dimen>
 
     <dimen name="fab_marginBottom">38dp</dimen>
+    <dimen name="top_scrim">120dp</dimen>
 </resources>

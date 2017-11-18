@@ -18,7 +18,14 @@
         <!-- Album Art-->
         <io.maerlyn.musicplayer.SquareImageView
             android:id="@+id/album_art"
-            style="@style/LibraryTitleImage" />
+            style="@style/LibraryTitleImage"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_scrim"
+            android:paddingTop="@dimen/dp_large"
+            android:src="@drawable/scrim_top"/>
+
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/shuffle_album"
